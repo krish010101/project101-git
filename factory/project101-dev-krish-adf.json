@@ -1,0 +1,9 @@
+{
+	"name": "project101-dev-krish-adf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "89f861da-0856-4650-ac79-a80c3cbfbac1",
+		"tenantId": "7a2aaf9a-ee79-48eb-ab51-148142a2138d"
+	}
+}
