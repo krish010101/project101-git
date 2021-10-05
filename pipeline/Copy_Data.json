@@ -5,7 +5,14 @@
 			{
 				"name": "Copy data Input to Output",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "Input",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -59,6 +66,20 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "Input",
+				"type": "Validation",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "DS_Input",
+						"type": "DatasetReference"
+					},
+					"timeout": "7.00:00:00",
+					"sleep": 10
+				}
 			}
 		],
 		"annotations": [],
